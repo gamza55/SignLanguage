@@ -1,0 +1,105 @@
+<style>
+  li {border-right: solid 1px black;}
+  li:last-child {border-right: none;}
+</style>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+  <title>HANDY BUDDY</title>
+<script></script>
+<style>
+  ul {
+        background-color: #ffffff;
+        width: 270px;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        border:solid 1px black;
+      }
+  
+  li {border-right:solid 1px black;}
+  li:last-child {border-right: none;}
+
+  li a {
+        display: block;
+        color: #000000;
+        padding: 8px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+  
+  li a.current {
+        background-color: #5578c3;
+        color:white;
+
+  }
+  li a:hover:not(.current) {
+        background-color: #5578c3;
+        color: white;
+      }
+</style>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <a class="navbar-brand" href="{{ url_for('main') }}">Main</a>
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse flex-grow-0" id="navbarNav">
+            <button class="navbar-nav">
+                <li class="nav-item ">
+                    <a class="nav-link" href="{{ url_for('words') }}">수화 단어 배우기</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="{{ url_for('learningsentences')}}">수화 문장 배우기</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="#">실전 수화</a>
+              </li>
+            </button>
+        </div>
+    </nav>
+
+
+<!-- jQuery JS -->
+<script src="{{ url_for('static', filename='jquery-3.4.1.min.js') }}"></script>
+<!-- Bootstrap JS -->
+<script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+
+<ul>
+  <!--링크바꾸기-->
+  <li style="font-size:20px;"><a href="{{ url_for('learningsentences') }}">소개</a></li>
+  <li><a href="{{ url_for('introduction1') }}">▶ 안녕하세요. 처음 뵙겠습니다.</a></li>
+  <li><a href="{{ url_for('introduction2') }}">▶ 안녕하세요. 만나서 반갑습니다.</a></li>
+  <li><a href="{{ url_for('introduction3') }}">▶ 취미는 무엇입니까?</a></li>
+  <li><a href="{{ url_for('introduction4') }}">▶ 책읽기입니다.</a></li>
+  <li><a href="{{ url_for('introduction5') }}">▶ 무슨 동물을 좋아합니까?</a></li>
+  <li><a href="{{ url_for('introduction6') }}">▶ 강아지를 좋아합니다.</a></li>
+  <li style="font-size:20px;"><a href="{{ url_for('learningsentences') }}">안부 묻기 및 식사 권유</a></li>
+  <li><a href="{{ url_for('asking1') }}">▶ 오랜만입니다.</a></li>
+  <li><a href="{{ url_for('asking2') }}">▶ 요즘 어떻게 지내셨어요?</a></li>
+  <li><a href="{{ url_for('asking3') }}">▶ 바빴어요.</a></li>
+  <li><a href="{{ url_for('asking4') }}">▶ 밥 먹었습니까?</a></li>
+  <li><a href="{{ url_for('asking5') }}">▶ 밥은 아직이에요.</a></li>
+  <li><a href="{{ url_for('asking6') }}">▶ 밥먹으러 함께 갑시다.</a></li>
+  <li><a href="{{ url_for('asking7') }}">▶ 국수 어때요?</a></li>
+  <li><a href="{{ url_for('asking8') }}">▶ 좋아요.</a></li>
+  <li style="font-size:20px;"><a href="{{ url_for('learningsentences') }}">병원</a></li>
+  <li><a href="{{ url_for('hospital1') }}">▶ 어디가 아프십니까?</a></li>
+  <li><a href="{{ url_for('hospital2') }}">▶ 춥고 기침을 해요.</a></li>
+  <li><a href="{{ url_for('hospital3') }}">▶ 다른 증상이 있으십니까?</a></li>
+  <li><a href="{{ url_for('hospital4') }}">▶ 아니요.</a></li>
+  <li><a href="{{ url_for('hospital5') }}">▶ 약을 드시고 충분히 휴식하시기 바랍니다.</a></li>
+  <li><a href="{{ url_for('hospital6') }}">▶ 또 와야 합니까?</a></li>
+  <li><a href="{{ url_for('hospital7') }}">▶ 이틀 후에 또 오세요.</a></li>
+</ul>
+
+</body>
+
+</html>

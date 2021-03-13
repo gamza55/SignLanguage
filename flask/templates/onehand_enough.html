@@ -1,0 +1,180 @@
+<style>
+    li {border-right: solid 1px black;}
+    li:last-child {border-right: none;}
+  </style>
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+  <title>HANDY BUDDY</title>
+  <script></script>
+  <style>
+    .button label {
+    display: inline-block;
+    padding: .3em .5em;
+    color: #fff;
+    font-size: xx-large;
+    line-height: normal;
+    vertical-align: middle;
+    background-color: #5578c3;
+    cursor: pointer;
+    border: 1px solid #5578c3;
+    border-radius: .25em;
+    -webkit-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+    top: 200px;
+    position: relative;
+    
+}
+
+.button label:hover {
+  background-color: #5578c3;
+}
+
+.button label:active {
+  background-color: #5578c3;
+}
+
+.button input[type="button"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+    
+    ul {
+          background-color: #ffffff;
+          width: 300px;
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          border:solid 1px black;
+        }
+    
+    li {border-right:solid 1px black;}
+    li:last-child {border-right: none;}
+  
+    li a {
+          display: block;
+          color: #000000;
+          padding: 8px;
+          text-decoration: none;
+          font-weight: bold;
+        }
+    
+    li a.current {
+          background-color: #5578c3;
+          color:white;
+  
+    }
+    li a:hover:not(.current) {
+          background-color: #5578c3;
+          color: white;
+        }
+  </style>
+  
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <a class="navbar-brand" href="{{ url_for('main') }}">Main</a>
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse flex-grow-0" id="navbarNav">
+            <button class="navbar-nav">
+                <li class="nav-item ">
+                    <a class="nav-link" href="{{ url_for('words') }}">수화 단어 배우기</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="{{ url_for('learningsentences') }}">수화 문장 배우기</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="{{ url_for('actual_practice') }}">실전 수화</a>
+              </li>
+            </button>
+        </div>
+    </nav>
+
+  <!-- jQuery JS -->
+  <script src="{{ url_for('static', filename='jquery-3.4.1.min.js') }}"></script>
+  <!-- Bootstrap JS -->
+  <script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+  
+
+
+
+
+  <ul>
+    <li style="font-size:20px;"><a href="{{ url_for('words') }}">한 손</a></li>
+    <li><a href="{{ url_for('onehand_first') }}">▶ 처음</a></li>
+    <li><a href="{{ url_for('onehand_hobby') }}">▶ 취미</a></li>
+    <li><a href="{{ url_for('onehand_what') }}">▶ 무엇(무슨,어디,어떤)</a></li>
+    <li><a href="{{ url_for('onehand_like') }}">▶ 좋다</a></li>
+    <li><a href="{{ url_for('onehand_dog') }}">▶ 강아지</a></li>
+    <li><a href="{{ url_for('onehand_thesedays') }}">▶ 요즘</a></li>
+    <li><a href="{{ url_for('onehand_eat') }}">▶ 먹다(밥)</a></li>
+    <li><a href="{{ url_for('onehand_go') }}">▶ 가다</a></li>
+    <li><a href="{{ url_for('onehand_sick') }}">▶ 아프다</a></li>
+    <li><a href="{{ url_for('onehand_cough') }}">▶ 기침하다</a></li>
+    <li><a href="{{ url_for('onehand_ill') }}">▶ 병</a></li>
+    <li><a href="{{ url_for('onehand_be') }}">▶ 있다</a></li>
+    <li><a href="{{ url_for('onehand_enough') }}">▶ 충분하다</a></li>
+    <li><a href="{{ url_for('onehand_and') }}">▶ 또</a></li>
+    <li><a href="{{ url_for('onehand_come') }}">▶ 오다</a></li>
+    <li><a href="{{ url_for('onehand_yes') }}">▶ 예</a></li>
+    <li><a href="{{ url_for('onehand_twodaysafter') }}">▶ 이틀 후(모레)</a></li>
+    <li style="font-size:20px;"><a href="{{ url_for('words') }}">두 손</a></li>
+    <li><a href="{{ url_for('twohands_hi') }}">▶ 안녕하세요</a></li>
+    <li><a href="{{ url_for('twohands_meet') }}">▶ 만나다</a></li>
+    <li><a href="{{ url_for('twohands_nicetomeet') }}">▶ 반갑다</a></li>
+    <li><a href="{{ url_for('twohands_readingbook') }}">▶ 책읽기</a></li>
+    <li><a href="{{ url_for('twohands_animal') }}">▶ 동물</a></li>
+    <li><a href="{{ url_for('twohands_longtimenosee') }}">▶ 오랜만</a></li>
+    <li><a href="{{ url_for('twohands_busy') }}">▶ 바쁘다</a></li>
+    <li><a href="{{ url_for('twohands_end') }}">▶ 끝(완료형)</a></li>
+    <li><a href="{{ url_for('twohands_yet') }}">▶ 아직</a></li>
+    <li><a href="{{ url_for('twohands_together') }}">▶ 함께</a></li>
+    <li><a href="{{ url_for('twohands_noodle') }}">▶ 국수</a></li>
+    <li><a href="{{ url_for('twohands_cold') }}">▶ 춥다</a></li>
+    <li><a href="{{ url_for('twohands_different') }}">▶ 다르다</a></li>
+    <li><a href="{{ url_for('twohands_state') }}">▶ 상태</a></li>
+    <li><a href="{{ url_for('twohands_no') }}">▶ 아니다</a></li>
+    <li><a href="{{ url_for('twohands_medicine') }}">▶ 약</a></li>
+    <li><a href="{{ url_for('twohands_rest') }}">▶ 쉬다(휴식)</a></li>
+    <li><a href="{{ url_for('twohands_favor') }}">▶ 부탁하다</a></li>
+  </ul>
+  
+  <center>
+    <video src="http://sldict.korean.go.kr/multimedia/multimedia_files/convert/20191022/630193/MOV000236772_700X466.webm"; style="position: relative; top:-1400px; left:100px;" controls></video>
+    <h1 style="position: relative; top:-1350px; left:100px;">수화 뜻 : 충분하다</h1>
+    <div class="button">
+      <label for="button" style="position: relative; top:-1360; right:-80px;">입력</label>
+        <input type="button" id="button">
+        <canvas id="canvas" width="550" height="100" style="position : relative; top:-1300px; right:-120px;"></canvas>
+        <script>
+          var rectangle = document.getElementById("canvas")
+          var context = rectangle.getContext("2d")
+          context.fillStyle = "#cfcccc"
+          
+          context.rect(0, 0, 550, 65)
+          context.fill()
+        </script>
+
+        <!-- 인식 성공하면 글 띄우기-->
+        <h2 style="position: relative; top:-1420px">정답입니다.</h2>
+    </div>
+  </center>
+
+  
+  </body>
+  
+  </html>
